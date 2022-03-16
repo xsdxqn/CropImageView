@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/rv_group"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/crop_rg_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_rect"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/crop_rect_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="框选" />
+
+        <RadioButton
+            android:id="@+id/rb_round"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/crop_round_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="画圈" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rv_group"
+        android:layout_alignParentRight="true"
+        android:text="完成" />
+
+    <com.example.mycropimageview.widget.SourceImageView
+        android:id="@+id/iv_source"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rv_group"
+        android:layout_gravity="center" />
+
+    <com.example.mycropimageview.widget.RectCropImageView
+        android:id="@+id/iv_rectcrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rv_group" />
+
+    <com.example.mycropimageview.widget.PaintCropImageView
+        android:id="@+id/iv_paintcrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rv_group"
+        android:visibility="gone" />
+
+</RelativeLayout>
